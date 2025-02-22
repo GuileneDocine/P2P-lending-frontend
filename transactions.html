@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Transaction History - P2P Lending</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <div class="sidebar-header">
+      <h2><a href="index.html" class="logo-link">P2P Lending</a></h2>
+    </div>
+    <ul class="sidebar-links">
+      <li><a href="dashboard.html"><i class="fas fa-home"></i> Overview</a></li>
+      <li><a href="loans.html"><i class="fas fa-hand-holding-usd"></i> Loans</a></li>
+      <li><a href="investors.html"><i class="fas fa-users"></i> Investors</a></li>
+      <li><a href="borrowers.html"><i class="fas fa-user-tie"></i> Borrowers</a></li>
+      <li><a href="transactions.html" class="active"><i class="fas fa-history"></i> Transaction History</a></li>
+      <li><a href="settings.html"><i class="fas fa-cog"></i> Settings</a></li>
+      <li><a href="notifications.html"><i class="fas fa-bell"></i> Notifications</a></li>
+    </ul>
+  </div>
+
+  <!-- Main Content -->
+  <div class="main-content">
+    <h1>Transaction History</h1>
+
+    <!-- Filters -->
+    <div class="filters">
+      <div class="filter-group">
+        <label for="transaction-type">Transaction Type:</label>
+        <select id="transaction-type">
+          <option value="all">All</option>
+          <option value="investment">Investment</option>
+          <option value="repayment">Repayment</option>
+          <option value="withdrawal">Withdrawal</option>
+        </select>
+      </div>
+
+      <div class="filter-group">
+        <label for="date-range">Date Range:</label>
+        <select id="date-range">
+          <option value="all">All Time</option>
+          <option value="last-7-days">Last 7 Days</option>
+          <option value="last-30-days">Last 30 Days</option>
+          <option value="last-90-days">Last 90 Days</option>
+        </select>
+      </div>
+
+      <button class="btn-apply-filters">Apply Filters</button>
+    </div>
+
+    <!-- Transaction Summary -->
+    <div class="summary-cards">
+      <div class="summary-card">
+        <h3><i class="fas fa-hand-holding-usd"></i> Total Transactions</h3>
+        <div class="summary-value">$125,000</div>
+        <div class="summary-label">Across all accounts</div>
+      </div>
+
+      <div class="summary-card">
+        <h3><i class="fas fa-coins"></i> Total Investments</h3>
+        <div class="summary-value">$85,000</div>
+        <div class="summary-label">From investors</div>
+      </div>
+
+      <div class="summary-card">
+        <h3><i class="fas fa-money-bill-wave"></i> Total Repayments</h3>
+        <div class="summary-value">$40,000</div>
+        <div class="summary-label">From borrowers</div>
+      </div>
+    </div>
+
+    <!-- Transaction Table -->
+    <div class="transaction-table">
+      <table>
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Transaction ID</th>
+            <th>Type</th>
+            <th>Amount</th>
+            <th>Status</th>
+            <th>Details</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>2023-10-01</td>
+            <td>TXN12345</td>
+            <td>Investment</td>
+            <td>$10,000</td>
+            <td><span class="status-completed">Completed</span></td>
+            <td><button class="btn-view-details">View</button></td>
+          </tr>
+          <tr>
+            <td>2023-10-02</td>
+            <td>TXN12346</td>
+            <td>Repayment</td>
+            <td>$2,500</td>
+            <td><span class="status-completed">Completed</span></td>
+            <td><button class="btn-view-details">View</button></td>
+          </tr>
+          <tr>
+            <td>2023-10-03</td>
+            <td>TXN12347</td>
+            <td>Withdrawal</td>
+            <td>$1,000</td>
+            <td><span class="status-pending">Pending</span></td>
+            <td><button class="btn-view-details">View</button></td>
+          </tr>
+          <tr>
+            <td>2023-10-04</td>
+            <td>TXN12348</td>
+            <td>Investment</td>
+            <td>$15,000</td>
+            <td><span class="status-completed">Completed</span></td>
+            <td><button class="btn-view-details">View</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

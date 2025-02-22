@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Loans - P2P Lending</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <div class="sidebar-header">
+      <h2><a href="index.html" class="logo-link">P2P Lending</a></h2>
+    </div>
+    <ul class="sidebar-links">
+      <li><a href="dashboard.html"><i class="fas fa-home"></i> Overview</a></li>
+      <li><a href="loans.html" class="active"><i class="fas fa-hand-holding-usd"></i> Loans</a></li>
+      <li><a href="investors.html"><i class="fas fa-users"></i> Investors</a></li>
+      <li><a href="borrowers.html"><i class="fas fa-user-tie"></i> Borrowers</a></li>
+      <li><a href="transactions.html"><i class="fas fa-history"></i> Transaction History</a></li>
+      <li><a href="settings.html"><i class="fas fa-cog"></i> Settings</a></li>
+      <li><a href="notifications.html"><i class="fas fa-bell"></i> Notifications</a></li>
+    </ul>
+  </div>
+
+  <!-- Main Content -->
+  <div class="main-content">
+    <h2>Loans</h2>
+
+    <!-- Active Loans Cards -->
+    <div class="loans-cards">
+      <div class="loan-card">
+        <h3>Loan ID: 001</h3>
+        <p><strong>Amount:</strong> $10,000</p>
+        <p><strong>Duration:</strong> 12 months</p>
+        <p><strong>Status:</strong> <span class="status-approved">Approved</span></p>
+      </div>
+      <div class="loan-card">
+        <h3>Loan ID: 002</h3>
+        <p><strong>Amount:</strong> $15,000</p>
+        <p><strong>Duration:</strong> 18 months</p>
+        <p><strong>Status:</strong> <span class="status-pending">Pending</span></p>
+      </div>
+      <div class="loan-card">
+        <h3>Loan ID: 003</h3>
+        <p><strong>Amount:</strong> $20,000</p>
+        <p><strong>Duration:</strong> 24 months</p>
+        <p><strong>Status:</strong> <span class="status-rejected">Rejected</span></p>
+      </div>
+    </div>
+    <div class="loans-cards">
+      <div class="loan-card">
+        <h3>Loan ID: 004</h3>
+        <p><strong>Amount:</strong> $12,000</p>
+        <p><strong>Duration:</strong> 11 months</p>
+        <p><strong>Status:</strong> <span class="status-approved">Approved</span></p>
+      </div>
+      <div class="loan-card">
+        <h3>Loan ID: 005</h3>
+        <p><strong>Amount:</strong> $19,000</p>
+        <p><strong>Duration:</strong> 21 months</p>
+        <p><strong>Status:</strong> <span class="status-pending">Pending</span></p>
+      </div>
+      <div class="loan-card">
+        <h3>Loan ID: 006</h3>
+        <p><strong>Amount:</strong> $13,000</p>
+        <p><strong>Duration:</strong> 19 months</p>
+        <p><strong>Status:</strong> <span class="status-rejected">Rejected</span></p>
+      </div>
+    </div>
+
+
+    <!-- Buttons -->
+    <div class="loan-buttons">
+      <button class="btn-apply">Apply for Loan</button>
+      <button class="btn-repay">Repay Loan</button>
+    </div>
+
+    <!-- Full-Page Overlay for Loan Application -->
+    <!-- Full-Page Overlay for Loan Application -->
+<div id="loan-application-overlay" class="overlay">
+  <div class="overlay-content">
+    <button class="btn-close-overlay" onclick="hideLoanApplication()">
+      <i class="fas fa-times"></i>
+    </button>
+    <h2>Apply for Loan</h2>
+
+    <!-- Loan Application Phases -->
+    <div class="loan-application">
+      <div class="phase-nodes">
+        <div class="phase-node" id="phase-1">1</div>
+        <div class="phase-node" id="phase-2">2</div>
+        <div class="phase-node" id="phase-3">3</div>
+        <div class="phase-node" id="phase-4">4</div>
+      </div>
+
+      <!-- Phase 1: Transaction Methods -->
+      <div id="phase-1-content" class="phase-content active">
+        <h3>Select Transaction Method</h3>
+        <div class="transaction-methods">
+          <div class="method-card" onclick="selectMethod('Bank Transfer')">
+            <i class="fas fa-university"></i>
+            <p>Bank Transfer</p>
+          </div>
+          <div class="method-card" onclick="selectMethod('Virtual Card')">
+            <i class="fas fa-credit-card"></i>
+            <p>Virtual Card</p>
+          </div>
+          <div class="method-card" onclick="selectMethod('Mobile Pay')">
+            <i class="fas fa-mobile-alt"></i>
+            <p>Mobile Pay</p>
+          </div>
+        </div>
+        <button class="btn-continue" onclick="nextPhase(2)">Continue <i class="fas fa-arrow-right"></i></button>
+      </div>
+
+      <!-- Phase 2: Personal Info -->
+      <div id="phase-2-content" class="phase-content">
+        <h3>Personal Information</h3>
+        <form id="personal-info-form">
+          <label for="first-name">First Name</label>
+          <input type="text" id="first-name" required placeholder="Enter First Name">
+
+          <label for="last-name">Last Name</label>
+          <input type="text" id="last-name" required placeholder="Enter Last Name">
+
+          <label for="email">Email</label>
+          <input type="email" id="email" required placeholder="example@gmail.com">
+
+          <label for="country">Country</label>
+          <select id="country" required>
+            <option value="">Select Country</option>
+            <option value="Cameroon">Cameroon</option>
+            <option value="Ghana">Ghana</option>
+            <option value="Nigeria">Nigeria</option>
+            <option value="Canada">Canada</option>
+            <option value="USA">USA</option>
+            <option value="UK">UK</option>
+          </select>
+
+          <label for="kyc-photo">Upload KYC Photo (Selfie with ID)</label>
+          <input type="file" id="kyc-photo" accept="image/*" required>
+        </form>
+        <button class="btn-continue" onclick="nextPhase(3)">Continue <i class="fas fa-arrow-right"></i></button>
+      </div>
+
+      <!-- Phase 3: Business Details -->
+      <div id="phase-3-content" class="phase-content">
+        <h3>Business Details</h3>
+        <form id="business-details-form">
+          <label for="business-type">Type of Business</label>
+          <input type="text" id="business-type" required placeholder="Summary of Business">
+
+          <label for="due-date">Due Date</label>
+          <input type="date" id="due-date" required>
+
+          <label for="collateral">Upload Collateral Document</label>
+          <input type="file" id="collateral" accept=".pdf,.doc,.docx" required>
+        </form>
+        <button class="btn-continue" onclick="nextPhase(4)">Review Application</button>
+      </div>
+
+        <!-- Phase 4: Preview -->
+        <div id="phase-4-content" class="phase-content">
+          <h3>Review Application</h3>
+          <p><strong>Transaction Method:</strong> <span id="preview-method"></span></p>
+          <p><strong>Full Name:</strong> <span id="preview-name"></span></p>
+          <p><strong>Email:</strong> <span id="preview-email"></span></p>
+          <p><strong>Business Type:</strong> <span id="preview-business"></span></p>
+          <p><strong>Due Date:</strong> <span id="preview-due-date"></span></p>
+          <p><strong>Collateral:</strong> <span id="preview-collateral"></span></p>
+          
+          <button class="btn-submit" onclick="submitApplication()">Submit Application</button>
+        </div>
+      </div>
+       <!-- Success Message -->
+    <div class="success-message" id="application-success">
+      <h3>Application Submitted Successfully! 🎉</h3>
+      <p>Your loan application has been received. We will review it shortly.</p>
+      <button class="btn-close-overlay" onclick="hideLoanApplication()"></button>
+    </div>
+    </div>
+  </div>
+    </div>
+
+    <!-- Repay Loan Overlay -->
+<div id="repay-loan-overlay" class="overlay">
+  <div class="overlay-content">
+    <button class="btn-close-overlay" onclick="hideRepayLoan()">
+      <i class="fas fa-times"></i>
+    </button>
+    <h2>Repay Loan</h2>
+
+    <!-- Loan Details -->
+    <div class="loan-details">
+      <h3>Loan Details</h3>
+      <p><strong>Loan ID:</strong> 001</p>
+      <p><strong>Amount:</strong> $10,000</p>
+      <p><strong>Due Date:</strong> 2023-12-31</p>
+      <p><strong>Remaining Balance:</strong> $7,500</p>
+    </div>
+
+    <!-- Repayment Method -->
+    <div class="repayment-method">
+      <h3>Select Repayment Method</h3>
+      <div class="transaction-methods">
+        <div class="method-card" onclick="selectRepaymentMethod('Bank Transfer')">
+          <i class="fas fa-university"></i>
+          <p>Bank Transfer</p>
+        </div>
+        <div class="method-card" onclick="selectRepaymentMethod('Mobile Pay')">
+          <i class="fas fa-mobile-alt"></i>
+          <p>Mobile Pay</p>
+        </div>
+        <div class="method-card" onclick="selectRepaymentMethod('Virtual Card')">
+          <i class="fas fa-credit-card"></i>
+          <p>Virtual Card</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Repayment Amount -->
+    <div class="repayment-amount">
+      <h3>Enter Repayment Amount</h3>
+      <input type="number" id="repayment-amount" placeholder="Enter amount" min="1" max="7500" required>
+      <p class="error-message" id="repayment-error"></p>
+    </div>
+
+    <!-- Confirmation -->
+    <div class="confirmation">
+      <h3>Confirm Repayment</h3>
+      <p><strong>Repayment Amount:</strong> $<span id="confirm-amount">0</span></p>
+      <p><strong>Repayment Method:</strong> <span id="confirm-method">Not selected</span></p>
+      <button class="btn-confirm" onclick="confirmRepayment()">Confirm Repayment</button>
+    </div>
+
+    <!-- Success Message -->
+    <div class="success-message" id="repay-success">
+      <h3>Repayment Successful!</h3>
+      <p>Your repayment of $<span id="success-amount">0</span> has been processed.</p>
+      <button class="btn-close-overlay" onclick="hideRepayLoan()"></button>
+    </div>
+  </div>
+</div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

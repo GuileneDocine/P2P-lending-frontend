@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Notifications - P2P Lending</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <div class="sidebar-header">
+      <h2><a href="index.html" class="logo-link">P2P Lending</a></h2>
+    </div>
+    <ul class="sidebar-links">
+      <li><a href="dashboard.html"><i class="fas fa-home"></i> Overview</a></li>
+      <li><a href="loans.html"><i class="fas fa-hand-holding-usd"></i> Loans</a></li>
+      <li><a href="investors.html"><i class="fas fa-users"></i> Investors</a></li>
+      <li><a href="borrowers.html"><i class="fas fa-user-tie"></i> Borrowers</a></li>
+      <li><a href="transactions.html"><i class="fas fa-history"></i> Transaction History</a></li>
+      <li><a href="settings.html"><i class="fas fa-cog"></i> Settings</a></li>
+      <li><a href="notifications.html" class="active"><i class="fas fa-bell"></i> Notifications</a></li>
+    </ul>
+  </div>
+
+  <!-- Main Content -->
+  <div class="main-content">
+    <h2>Notifications</h2>
+
+    <!-- Notification Filters -->
+    <div class="notification-filters">
+      <button class="btn-filter active">All</button>
+      <button class="btn-filter">Unread</button>
+      <button class="btn-filter">System</button>
+      <button class="btn-filter">Transfers</button>
+    </div>
+
+    <!-- Notifications List -->
+    <div class="notifications-list">
+      <!-- Notification 1 -->
+      <div class="notification">
+        <div class="notification-icon">
+          <i class="fas fa-info-circle"></i>
+        </div>
+        <div class="notification-content">
+          <h4>Loan Application Approved</h4>
+          <p>Your loan application for $10,000 has been approved. Funds will be disbursed shortly.</p>
+          <p class="timestamp">2 hours ago</p>
+        </div>
+        <div class="notification-actions">
+          <button class="btn-mark-read">Mark as Read</button>
+        </div>
+      </div>
+
+      <!-- Notification 2 -->
+      <div class="notification">
+        <div class="notification-icon">
+          <i class="fas fa-money-bill-transfer"></i>
+        </div>
+        <div class="notification-content">
+          <h4>Bank Transfer Successful</h4>
+          <p>Your transfer of $5,000 to Green Bank has been completed successfully.</p>
+          <p class="timestamp">5 hours ago</p>
+        </div>
+        <div class="notification-actions">
+          <button class="btn-mark-read">Mark as Read</button>
+        </div>
+      </div>
+
+      <!-- Notification 3 -->
+      <div class="notification">
+        <div class="notification-icon">
+          <i class="fas fa-mobile-alt"></i>
+        </div>
+        <div class="notification-content">
+          <h4>Mobile Payment Received</h4>
+          <p>You have received a payment of $1,200 via Mobile Pay.</p>
+          <p class="timestamp">1 day ago</p>
+        </div>
+        <div class="notification-actions">
+          <button class="btn-mark-read">Mark as Read</button>
+        </div>
+      </div>
+
+      <!-- Notification 4 -->
+      <div class="notification">
+        <div class="notification-icon">
+          <i class="fas fa-exclamation-triangle"></i>
+        </div>
+        <div class="notification-content">
+          <h4>Loan Repayment Reminder</h4>
+          <p>Your loan repayment of $2,500 is due in 3 days. Please ensure sufficient funds are available.</p>
+          <p class="timestamp">2 days ago</p>
+        </div>
+        <div class="notification-actions">
+          <button class="btn-mark-read">Mark as Read</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

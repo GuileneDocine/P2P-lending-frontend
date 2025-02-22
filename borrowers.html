@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Borrowers - P2P Lending</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <div class="sidebar-header">
+      <h2><a href="index.html" class="logo-link">P2P Lending</a></h2>
+    </div>
+    <ul class="sidebar-links">
+      <li><a href="dashboard.html"><i class="fas fa-home"></i> Overview</a></li>
+      <li><a href="loans.html"><i class="fas fa-hand-holding-usd"></i> Loans</a></li>
+      <li><a href="investors.html"><i class="fas fa-users"></i> Investors</a></li>
+      <li><a href="borrowers.html" class="active"><i class="fas fa-user-tie"></i> Borrowers</a></li>
+      <li><a href="transactions.html"><i class="fas fa-history"></i> Transaction History</a></li>
+      <li><a href="settings.html"><i class="fas fa-cog"></i> Settings</a></li>
+      <li><a href="notifications.html"><i class="fas fa-bell"></i> Notifications</a></li>
+    </ul>
+  </div>
+
+  <!-- Main Content -->
+  <div class="main-content">
+    <h2>Borrowers</h2>
+
+    <!-- Borrowers List -->
+    <div class="borrowers-list">
+      <!-- Borrower 1 -->
+      <div class="borrower">
+        <div class="borrower-icon">
+          <i class="fas fa-user"></i>
+        </div>
+        <div class="borrower-details">
+          <h3>Alice Johnson</h3>
+          <p><strong>Loan Amount:</strong> $15,000</p>
+          <p><strong>Interest Rate:</strong> 6.5%</p>
+          <p><strong>Repayment Status:</strong> On Track</p>
+          <p><strong>Due Date:</strong> December 2023</p>
+        </div>
+        <div class="borrower-actions">
+          <button class="btn-view">View Details</button>
+        </div>
+      </div>
+
+      <!-- Borrower 2 -->
+      <div class="borrower">
+        <div class="borrower-icon">
+          <i class="fas fa-user"></i>
+        </div>
+        <div class="borrower-details">
+          <h3>Robert Wilson</h3>
+          <p><strong>Loan Amount:</strong> $10,000</p>
+          <p><strong>Interest Rate:</strong> 7.0%</p>
+          <p><strong>Repayment Status:</strong> Delayed</p>
+          <p><strong>Due Date:</strong> November 2023</p>
+        </div>
+        <div class="borrower-actions">
+          <button class="btn-view">View Details</button>
+        </div>
+      </div>
+
+      <!-- Borrower 3 -->
+      <div class="borrower">
+        <div class="borrower-icon">
+          <i class="fas fa-user"></i>
+        </div>
+        <div class="borrower-details">
+          <h3>Emily Davis</h3>
+          <p><strong>Loan Amount:</strong> $20,000</p>
+          <p><strong>Interest Rate:</strong> 5.8%</p>
+          <p><strong>Repayment Status:</strong> On Track</p>
+          <p><strong>Due Date:</strong> January 2024</p>
+        </div>
+        <div class="borrower-actions">
+          <button class="btn-view">View Details</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

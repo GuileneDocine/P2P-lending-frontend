@@ -1,0 +1,898 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+  }
+  
+  /* Navigation Bar */
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #2c3e50;
+    padding: 1rem 2rem;
+  }
+  
+  nav .logo {
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  nav .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+  }
+  
+  nav .nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+  }
+  
+  nav .nav-links a.active {
+    color: #1abc9c;
+  }
+  
+  /* Hero Section */
+  .hero {
+    background: url('./assets/images/hero.jpg') no-repeat center center/cover;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+  }
+  
+  .hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+  
+  .hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .buttons .btn {
+    padding: 0.8rem 2rem;
+    margin: 0 0.5rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  
+  .buttons .login {
+    background-color: #1abc9c;
+    color: #fff;
+  }
+  
+  .buttons .signup {
+    background-color: #3498db;
+    color: #fff;
+  }
+
+  .buttons .dashboard {
+    background-color: #186ca3;
+    color: #fff;
+  }
+  
+  /* About Section */
+.about {
+  padding: 2rem;
+  text-align: center;
+}
+
+.about .tagline {
+  font-size: 1.5rem;
+  color: #1abc9c;
+  margin-bottom: 2rem;
+}
+
+.about-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.about-text {
+  flex: 1;
+  text-align: left;
+}
+
+.about-text p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.about-image {
+  flex: 1;
+}
+
+.about-image img {
+  max-width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Key Features Section */
+.key-features {
+  margin: 3rem 0;
+}
+
+.key-features h3 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.feature {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.feature i {
+  font-size: 2rem;
+  color: #1abc9c;
+  margin-bottom: 1rem;
+}
+
+.feature h4 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.feature p {
+  font-size: 1rem;
+  color: #666;
+}
+
+/* Team Section */
+.team {
+  margin: 3rem 0;
+}
+
+.team h3 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+}
+
+.team-member {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.team-member img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+
+.team-member h4 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.team-member p {
+  font-size: 1rem;
+  color: #666;
+}
+  
+  /* Contact Section */
+  .contact {
+    padding: 2rem;
+    text-align: center;
+  }
+  
+  .contact form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  
+  .contact input, .contact textarea {
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .contact button {
+    padding: 0.8rem;
+    background-color: #1abc9c;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  /* Footer */
+  footer {
+    background-color: #2c3e50;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+
+/* Style for the logo link */
+.logo-link {
+  text-decoration: none; 
+  color: inherit; 
+  cursor: default;
+}
+
+.logo-link:hover {
+  color: inherit; 
+  text-decoration: none; 
+}
+
+.main-content {
+  margin-left: 250px;
+  padding: 2rem;
+}
+
+.dashboard-section {
+  margin-bottom: 3rem;
+}
+
+.overview-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.card {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.card p {
+  font-size: 1.5rem;
+  color: #1abc9c;
+}
+
+.chart img {
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+/* Loans Page Styles */
+.loans-cards {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.loan-card {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  flex: 1;
+}
+
+.loan-card h3 {
+  margin: 0 0 1rem;
+}
+
+.loan-card p {
+  margin: 0.5rem 0;
+}
+
+.status-approved {
+  color: #28a745;
+}
+
+.status-pending {
+  color: #ffc107;
+}
+
+.status-rejected {
+  color: #dc3545;
+}
+
+.loan-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+.btn-apply, .btn-repay {
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.btn-apply {
+  background-color: #1abc9c;
+  color: #fff;
+}
+
+.btn-repay {
+  background-color: #3498db;
+  color: #fff;
+}
+
+/* Loans Page Styles */
+.loans-cards {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.loan-card {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  flex: 1;
+}
+
+.loan-card h3 {
+  margin: 0 0 1rem;
+}
+
+.loan-card p {
+  margin: 0.5rem 0;
+}
+
+.status-approved {
+  color: #28a745;
+}
+
+.status-pending {
+  color: #ffc107;
+}
+
+.status-rejected {
+  color: #dc3545;
+}
+
+.loan-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+.btn-apply, .btn-repay {
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.btn-apply {
+  background-color: #1abc9c;
+  color: #fff;
+}
+
+.btn-repay {
+  background-color: #3498db;
+  color: #fff;
+}
+
+/* Full-Page Overlay */
+.overlay {
+  display: none; /* Hidden by default */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+  z-index: 1000; /* Ensure it appears above other content */
+  overflow-y: auto; /* Allow scrolling if content is too long */
+}
+
+.overlay-content {
+  background-color: #fff;
+  margin: 2rem auto;
+  padding: 2rem;
+  border-radius: 10px;
+  max-width: 800px;
+  position: relative;
+}
+
+.btn-close-overlay {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #333;
+}
+
+.btn-close-overlay:hover {
+  color: #1abc9c;
+}
+
+/* Loan Application Phases (inside overlay) */
+.loan-application {
+  margin-top: 2rem;
+}
+
+.phase-nodes {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+.phase-node {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.phase-node.active {
+  background-color: #1abc9c;
+  color: #fff;
+}
+
+.phase-node.completed {
+  background-color: #3498db;
+  color: #fff;
+}
+
+.phase-content {
+  display: none;
+}
+
+.phase-content.active {
+  display: block;
+}
+
+.transaction-methods {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.method-card {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  cursor: pointer;
+  flex: 1;
+}
+
+.method-card:hover {
+  background-color: #f4f4f9;
+}
+
+.btn-continue {
+  padding: 0.8rem 1.5rem;
+  background-color: #1abc9c;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-top: 1rem;
+  display: flex;
+  
+}
+
+.btn-continue i {
+  margin-left: 0.5rem;
+}
+
+.btn-continue:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* Phase 2: Personal Information */
+#phase-2-content {
+  margin-top: 2rem;
+}
+
+#phase-2-content h3 {
+  margin-bottom: 1.5rem;
+}
+
+#phase-2-content label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+#phase-2-content input,
+#phase-2-content select {
+  width: 100%;
+  padding: 0.8rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+#phase-2-content input[type="file"] {
+  padding: 0.5rem;
+}
+
+#phase-2-content .btn-continue {
+  margin-top: 1rem;
+}
+
+/* Phase 3: Business Details */
+#phase-3-content {
+  margin-top: 2rem;
+}
+
+#phase-3-content h3 {
+  margin-bottom: 1.5rem;
+}
+
+#phase-3-content label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+#phase-3-content input,
+#phase-3-content select,
+#phase-3-content input[type="date"],
+#phase-3-content input[type="file"] {
+  width: 100%;
+  padding: 0.8rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+#phase-3-content input[type="file"] {
+  padding: 0.5rem;
+}
+
+#phase-3-content .btn-continue {
+  margin-top: 1rem;
+  align-content: center;
+}
+
+.phase-content.active {
+  display: block;
+}
+
+.btn-submit {
+  padding: 0.8rem 1.5rem;
+  background-color: #1abc9c;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-top: 1rem;
+  display: flex;
+}
+
+#success-message {
+  text-align: center;
+  background-color: #d4edda;
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 20px;
+  display: none;
+}
+
+#success-message h3 {
+  color: #155724;
+}
+
+#application-success {
+  display: none; /* Hidden by default */
+  text-align: center;
+  background-color: #d4edda;
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+#application-success h3 {
+  color: #28a745; /* Green color for success */
+}
+
+/* Repay Loan Overlay */
+#repay-loan-overlay .overlay-content {
+  max-width: 600px; /* Adjust width for better readability */
+}
+
+.loan-details, .repayment-method, .repayment-amount, .confirmation, .success-message {
+  margin-bottom: 2rem;
+}
+
+.repayment-amount input {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-top: 1rem;
+}
+
+.error-message {
+  color: #dc3545; /* Red color for error messages */
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+}
+
+.confirmation p {
+  margin: 0.5rem 0;
+}
+
+.btn-confirm {
+  padding: 0.8rem 1.5rem;
+  background-color: #1abc9c;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-top: 1rem;
+}
+
+.btn-confirm:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.success-message {
+  text-align: center;
+}
+
+.success-message h3 {
+  color: #28a745; /* Green color for success message */
+}
+
+/* Notifications Page Styles */
+.notification-filters {
+  margin-bottom: 2rem;
+}
+
+.btn-filter {
+  padding: 0.5rem 1rem;
+  background-color: #f4f4f9;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.btn-filter.active {
+  background-color: #1abc9c;
+  color: #fff;
+}
+
+.notifications-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.notification {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.notification-icon {
+  font-size: 1.5rem;
+  color: #1abc9c;
+  margin-right: 1rem;
+}
+
+.notification-content {
+  flex: 1;
+}
+
+.notification-content h4 {
+  margin: 0 0 0.5rem;
+  color: #2c3e50;
+}
+
+.notification-content p {
+  margin: 0;
+  color: #666;
+}
+
+.timestamp {
+  font-size: 0.8rem;
+  color: #999;
+  margin-top: 0.5rem;
+}
+
+.notification-actions {
+  margin-left: 1rem;
+}
+
+.btn-mark-read {
+  padding: 0.5rem 1rem;
+  background-color: #f4f4f9;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.btn-mark-read:hover {
+  background-color: #1abc9c;
+  color: #fff;
+}
+
+/* Investors and Borrowers Page Styles */
+.investors-list, .borrowers-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.investor, .borrower {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.investor-icon, .borrower-icon {
+  font-size: 1.5rem;
+  color: #1abc9c;
+  margin-right: 1rem;
+}
+
+.investor-details, .borrower-details {
+  flex: 1;
+}
+
+.investor-details h3, .borrower-details h3 {
+  margin: 0 0 0.5rem;
+  color: #2c3e50;
+}
+
+.investor-details p, .borrower-details p {
+  margin: 0.3rem 0;
+  color: #666;
+}
+
+.investor-actions, .borrower-actions {
+  margin-left: 1rem;
+}
+
+.btn-view {
+  padding: 0.5rem 1rem;
+  background-color: #1abc9c;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn-view:hover {
+  background-color: #16a085;
+}
+/* Transaction History Page */
+.transactions-table {
+  margin-top: 1rem;
+}
+
+.transactions-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.transactions-table th, .transactions-table td {
+  padding: 0.8rem;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+.transactions-table th {
+  background-color: #f4f4f9;
+}
+
+
+/* Settings Page Styles */
+.settings-section {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+}
+
+.settings-section h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  color: #2c3e50;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.settings-section h3 i {
+  color: #1abc9c;
+}
+
+.settings-subsection {
+  margin-bottom: 1.5rem;
+}
+
+.settings-subsection h4 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.settings-subsection p {
+  margin: 0.5rem 0;
+  color: #666;
+}
+
+.btn-edit {
+  padding: 0.5rem 1rem;
+  background-color: #1abc9c;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+.btn-edit:hover {
+  background-color: #16a085;
+}
