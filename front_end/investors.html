@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Investors - P2P Lending</title>
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <div class="sidebar-header">
+      <h2><a href="index.html" class="logo-link">P2P Lending</a></h2>
+    </div>
+    <ul class="sidebar-links">
+      <li><a href="dashboard.html"><i class="fas fa-home"></i> Overview</a></li>
+      <li><a href="loans.html"><i class="fas fa-hand-holding-usd"></i> Loans</a></li>
+      <li><a href="investors.html" class="active"><i class="fas fa-users"></i> Investors</a></li>
+      <li><a href="borrowers.html"><i class="fas fa-user-tie"></i> Borrowers</a></li>
+      <li><a href="transactions.html"><i class="fas fa-history"></i> Transaction History</a></li>
+      <li><a href="settings.html"><i class="fas fa-cog"></i> Settings</a></li>
+      <li><a href="notifications.html"><i class="fas fa-bell"></i> Notifications</a></li>
+    </ul>
+  </div>
+
+  <!-- Main Content -->
+  <div class="main-content">
+    <h2>Investors</h2>
+
+<!-- Available Balance -->
+  <div class="balance-card">
+    <h3><i class="fas fa-wallet"></i> Available Balance</h3>
+    <div class="balance-amount">$5,000</div>
+    <button class="btn-withdraw" onclick="showWithdrawOverlay()">Withdraw Funds</button>
+  </div>
+
+  <!-- Loan Listings -->
+  <div class="loan-listings">
+    <h3><i class="fas fa-hand-holding-usd"></i> Available Loans</h3>
+    <div class="loan-card1">
+      <h4>Loan ID: 001</h4>
+      <p><strong>Amount:</strong> $10,000</p>
+      <p><strong>Interest Rate:</strong> 8%</p>
+      <p><strong>Risk Rating:</strong> <span class="risk-low">Low Risk</span></p>
+      <p><strong>Repayment Period:</strong> 12 months</p>
+      <button class="btn-invest" onclick="showInvestOverlay('001')">Invest</button>
+    </div>
+    <div class="loan-card1">
+      <h4>Loan ID: 002</h4>
+      <p><strong>Amount:</strong> $15,000</p>
+      <p><strong>Interest Rate:</strong> 12%</p>
+      <p><strong>Risk Rating:</strong> <span class="risk-medium">Medium Risk</span></p>
+      <p><strong>Repayment Period:</strong> 18 months</p>
+      <button class="btn-invest" onclick="showInvestOverlay('002')">Invest</button>
+    </div>
+  </div>
+
+
+<!-- Withdraw Funds Overlay -->
+<div id="withdraw-overlay" class="overlay">
+  <div class="overlay-content">
+    <button class="btn-close-overlay" onclick="hideWithdrawOverlay()">
+      <i class="fas fa-times"></i>
+    </button>
+    <h2>Withdraw Funds</h2>
+    <p class="overlay-description">Enter the amount you wish to withdraw and select a withdrawal method.</p>
+
+    <!-- Withdrawal Form -->
+    <form id="withdraw-form">
+      <label for="withdraw-amount">Amount ($)</label>
+      <input type="number" id="withdraw-amount" required placeholder="Enter Amount" min="1" max="5000">
+      <p class="limit-info">Minimum: $10 | Maximum: $5,000</p>
+
+      <label for="withdraw-method">Withdrawal Method</label>
+      <select id="withdraw-method" required>
+        <option value="bank-transfer">Bank Transfer</option>
+        <option value="mobile-pay">Mobile Pay</option>
+      </select>
+
+      <!-- Confirmation Message -->
+      <div id="withdraw-confirmation" class="confirmation-message">
+        <p>Are you sure you want to withdraw <strong>$<span id="confirm-withdraw-amount">0</span></strong> via <strong><span id="confirm-withdraw-method">Bank Transfer</span></strong>?</p>
+        <button type="button" class="btn-confirm" onclick="submitWithdrawRequest()">Confirm Withdrawal</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<!-- Invest Overlay -->
+<div id="invest-overlay" class="overlay">
+  <div class="overlay-content">
+    <button class="btn-close-overlay" onclick="hideInvestOverlay()">
+      <i class="fas fa-times"></i>
+    </button>
+    <h2>Invest in Loan</h2>
+    <p class="overlay-description">Enter the amount you wish to invest in this loan.</p>
+
+    <!-- Investment Form -->
+    <form id="invest-form">
+      <label for="invest-amount">Amount ($)</label>
+      <input type="number" id="invest-amount" required placeholder="Enter Amount" min="1" max="10000">
+      <p class="limit-info">Minimum: $100 | Maximum: $10,000</p>
+
+      <!-- Loan Details -->
+      <div class="loan-details">
+        <p><strong>Loan ID:</strong> <span id="invest-loan-id">001</span></p>
+        <p><strong>Interest Rate:</strong> <span id="invest-interest-rate">8%</span></p>
+        <p><strong>Risk Rating:</strong> <span id="invest-risk-rating" class="risk-low">Low Risk</span></p>
+      </div>
+
+      <div class="fee-info">
+        <p><strong>Transaction Fee (1%):</strong> $<span id="transaction-fee">0</span></p>
+        <p><strong>Total Deducted:</strong> $<span id="total-deducted">0</span></p>
+      </div>
+      
+      <!-- Confirmation Message -->
+      <div id="invest-confirmation" class="confirmation-message">
+        <p>Are you sure you want to invest <strong>$<span id="confirm-invest-amount">0</span></strong> in Loan <strong>#<span id="confirm-loan-id">001</span></strong>?</p>
+        <button type="button" class="btn-confirm" onclick="submitInvestment()">Confirm Investment</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+    <!-- Investors List -->
+    <div class="investors-list">
+      <!-- Investor 1 -->
+      <div class="investor">
+        <div class="investor-icon">
+          <i class="fas fa-user-tie"></i>
+        </div>
+        <div class="investor-details">
+          <h3>John Doe</h3>
+          <p><strong>Total Investments:</strong> $50,000</p>
+          <p><strong>Active Loans:</strong> 5</p>
+          <p><strong>Average ROI:</strong> 8.5%</p>
+          <p><strong>Joined:</strong> January 2023</p>
+        </div>
+        <div class="investor-actions">
+          <button class="btn-view">View Profile</button>
+        </div>
+      </div>
+
+      <!-- Investor 2 -->
+      <div class="investor">
+        <div class="investor-icon">
+          <i class="fas fa-user-tie"></i>
+        </div>
+        <div class="investor-details">
+          <h3>Jane Smith</h3>
+          <p><strong>Total Investments:</strong> $30,000</p>
+          <p><strong>Active Loans:</strong> 3</p>
+          <p><strong>Average ROI:</strong> 7.2%</p>
+          <p><strong>Joined:</strong> March 2023</p>
+        </div>
+        <div class="investor-actions">
+          <button class="btn-view">View Profile</button>
+        </div>
+      </div>
+
+      <!-- Investor 3 -->
+      <div class="investor">
+        <div class="investor-icon">
+          <i class="fas fa-user-tie"></i>
+        </div>
+        <div class="investor-details">
+          <h3>Michael Brown</h3>
+          <p><strong>Total Investments:</strong> $75,000</p>
+          <p><strong>Active Loans:</strong> 7</p>
+          <p><strong>Average ROI:</strong> 9.1%</p>
+          <p><strong>Joined:</strong> February 2023</p>
+        </div>
+        <div class="investor-actions">
+          <button class="btn-view">View Profile</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="./assets/js/script.js"></script>
+</body>
+</html>
