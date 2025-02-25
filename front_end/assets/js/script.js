@@ -1,8 +1,22 @@
 // Check if user is logged in (dummy check for now)
-const isLoggedIn = false; // Change to true after login
+// const isLoggedIn = false; // Change to true after login
 
-const dashboardBtn = document.getElementById('dashboardBtn');
-const loginBtn = document.getElementById('loginBtn');
+// const dashboardBtn = document.getElementById('dashboardBtn');
+// const loginBtn = document.getElementById('loginBtn');
+
+// Hamburger Menu Toggle
+document.addEventListener('DOMContentLoaded', () => {
+  const menuToggle = document.createElement('div');
+  menuToggle.classList.add('menu-toggle');
+  menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
+  document.querySelector('nav').appendChild(menuToggle);
+
+  const navLinks = document.querySelector('.nav-links');
+
+  menuToggle.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+  });
+});
 
 // dashboardBtn.addEventListener('click', (e) => {
 //   if (!isLoggedIn) {
@@ -254,6 +268,16 @@ function showWithdrawOverlay() {
 function hideWithdrawOverlay() {
   document.getElementById('withdraw-overlay').style.display = 'none';
 }
+
+document.getElementById('loginForm').addEventListener('submit', function(event){
+  event.preventDefault();
+  window.location.href = 'dashboard.html';
+});
+
+document.getElementById('signupForm').addEventListener('submit', function(event){
+  event.preventDefault();
+  window.location.href = 'dashboard.html';
+});``
 
 document.getElementById('withdraw-amount').addEventListener('input', function () {
   const amount = this.value;

@@ -4,7 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact Us - P2P Lending</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="./assets/css/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
   <!-- Navigation Bar -->
@@ -20,19 +21,64 @@
   <!-- Contact Section -->
   <section class="contact">
     <h2>Contact Us</h2>
-    <form>
-      <input type="text" placeholder="Your Name" required>
-      <input type="email" placeholder="Your Email" required>
-      <textarea placeholder="Your Message" required></textarea>
-      <button type="submit">Send Message</button>
+    <p class="contact-description">Please feel free to talk to us if you have any questions. We endeavour to answer within 24 hours.</p>
+    <form class="contact-form">
+      <div class="form-group">
+        <input type="text" placeholder="Your Name" required>
+      </div>
+      <div class="form-group">
+        <input type="email" placeholder="Your Email" required>
+      </div>
+      <div class="form-group">
+        <textarea placeholder="Your Message" rows="5" required></textarea>
+      </div>
+      <div class="form-actions">
+        <button type="submit" class="btn-send">Send</button>
+        <button type="reset" class="btn-cancel">Cancel</button>
+      </div>
     </form>
   </section>
 
   <!-- Footer -->
   <footer>
-    <p>&copy; 2023 Peer-to-Peer Lending System. All rights reserved.</p>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>About Us</h3>
+        <p>P2P Lending is a platform that connects borrowers and investors directly, offering competitive rates and transparent processes.</p>
+      </div>
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="terms.html">Terms of Service</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Contact Info</h3>
+        <ul>
+          <li><i class="fas fa-map-marker-alt"></i>Molyko, Buea, South West, Cameroon</li>
+          <li><i class="fas fa-phone"></i>+237 672469627</li>
+          <li><i class="fas fa-envelope"></i> info@p2plending.com</li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Follow Us</h3>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-linkedin"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 Peer-to-Peer Lending System. All rights reserved.</p>
+    </div>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="./assets/js/script.js"></script>
 </body>
 </html>
